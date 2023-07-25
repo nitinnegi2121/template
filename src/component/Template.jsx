@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Data from "../Template2.json";
+import Data from "../Template.json";
 
 function Template() {
     const [data, setData] = useState(Data)
