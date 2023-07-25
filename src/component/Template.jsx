@@ -26,21 +26,21 @@ function Template() {
                         <div key={key}>
                             {innerItem.type === "header" ? <div className="dt-section">
                                 <h4>Template Header</h4>
-                                {innerItem.parameters.map((paraIten) =>
-                                    paraIten.type === "image" ? <img src={paraIten.image.link} /> :
+                                {innerItem.parameters.map((paraItem) =>
+                                    paraItem.type === "image" ? <img src={paraItem.image.link} /> :
 
-                                        paraIten.type === "document" ? <iframe src={paraIten.document.link}></iframe>:
-                                            paraIten.type === "image" ? <img src={paraIten.image.link} /> :
-                                               paraIten.type === "video" ? <iframe src={paraIten.video.link}></iframe> :
-                                               paraIten.type === "text" ? <p>{paraIten.text}</p> :
+                                        paraItem.type === "document" ? <iframe src={paraItem.document.link}></iframe>:
+                                            paraItem.type === "image" ? <img src={paraItem.image.link} /> :
+                                               paraItem.type === "video" ? <iframe src={paraItem.video.link}></iframe> :
+                                               paraItem.type === "text" ? <p>{paraItem.text}</p> :
 
                                                     null)} 
                             </div> :
                                 innerItem.type === "body" ?
                                     <div className="dt-section">
                                         <h4>Template Body</h4>
-                                        {innerItem.parameters.map((paraIten) =>
-                                            paraIten.type === "text" ? <p>{paraIten.text}</p> :
+                                        {innerItem.parameters.map((paraItem) =>
+                                            paraItem.type === "text" ? <p>{paraItem.text}</p> :
                                                 null)}
 
                                     </div>
