@@ -27,11 +27,13 @@ function Template() {
                             {innerItem.type === "header" ? <div className="dt-section">
                                 <h4>Template Header</h4>
                                 {innerItem.parameters.map((paraItem) =>
-                                    paraItem.type === "image" ? <img src={paraItem.image.link} /> :
+                                    paraItem.type === "image" ? <img src={paraItem.image.link }  alt={paraItem.image.alt}/> :
 
-                                        paraItem.type === "document" ? <iframe src={paraItem.document.link}></iframe>:
-                                            paraItem.type === "image" ? <img src={paraItem.image.link} /> :
-                                               paraItem.type === "video" ? <iframe src={paraItem.video.link}></iframe> :
+                                        paraItem.type === "document" ? 
+                                        <a href={paraItem.document.link}>Document Link</a>
+                                        :
+                                            paraItem.type === "image" ? <img src={paraItem.image.link} alt={paraItem.image.alt}/> :
+                                               paraItem.type === "video" ? <iframe src={paraItem.video.link} title="Video Player"></iframe> :
                                                paraItem.type === "text" ? <p>{paraItem.text}</p> :
 
                                                     null)} 
