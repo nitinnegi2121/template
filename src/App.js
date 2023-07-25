@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
-import TemplateTest from './TemplateTest';
+
+import Template from './component/Template';
 
 function App() {
   return (
     <div >
-      <TemplateTest/>
+      <Template/>
     </div>
   );
 }

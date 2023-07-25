@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import Data from './Template2.json'
+import Data from "../Template2.json";
 
-function TemplateTest() {
+function Template() {
     const [data, setData] = useState(Data)
     const [selectedTemp, setSelectedTemp] = useState("")
     console.log(data)
@@ -52,4 +52,4 @@ function TemplateTest() {
     )
         }
 
-            export default TemplateTest
+            export default Template
