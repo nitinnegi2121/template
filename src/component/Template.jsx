@@ -12,7 +12,7 @@ function Template() {
     }
 
     return (
-        <div className='demo-template'>
+        <div className='template'>
             <div className='dt-top'>
                 <select onChange={handleSelect} value={selectedTemp} className={selectedTemp === "" && "select-error"}>
                     <option value="">Select Template</option>
@@ -30,6 +30,8 @@ function Template() {
                                     paraItem.type === "image" ? <img src={paraItem.image.link }  alt={paraItem.image.alt}/> :
 
                                         paraItem.type === "document" ? 
+
+                                        
                                         <a href={paraItem.document.link}>Document Link</a>
                                         :
                                             paraItem.type === "image" ? <img src={paraItem.image.link} alt={paraItem.image.alt}/> :
