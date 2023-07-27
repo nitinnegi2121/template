@@ -1,162 +1,179 @@
-[ 
-    {
-      "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
-      "name": "sample_movie_ticket_confirmation",
-      "language": {
-        "policy": "deterministic",
-        "code": "id"
+[
+  {
+    "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
+    "name": "sample_movie_ticket_confirmation",
+    "language": {
+      "policy": "deterministic",
+      "code": "id"
+    },
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "link": ""
+          }
+        ]
       },
-      "components": [
-        {
-          "type": "body",
-          "parameters": [
-            {
-              "type": "text",
-              "text": "Hi test"
-            },
-            {
-              "type": "text",
-              "text": "Hi test"
-            },
-            {
-              "type": "text",
-              "text": "Hi test"
-            },
-            {
-              "type": "text",
-              "text": "Hi test"
-            }
-          ]
-        }
+      {
+        "type": "body",
+        "parameters": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "footer",
+        "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi."
+      }
     ]
+  },
+  {
+    "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
+    "name": "starb_buck_ticket_confirmation",
+    "language": {
+      "policy": "deterministic",
+      "code": "id"
     },
-
-    {
-        "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
-        "name": "starb_buck_ticket_confirmation",
-        "language": {
-          "policy": "deterministic",
-          "code": "id"
-        },
-        "components": [
-        {
-          "type": "header",
-          "parameters": [
-            {
-              "type": "image",
-              "image": {
-                "link": "https://rumchatwhatsapp.s3-ap-southeast-1.amazonaws.com/uploads/2021/10/21/2e84f3fa-cc3b-424d-a281-0a5b5732f8b8.png"
-              }
-            }
-          ]
-        }
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "type": "body",
+        "parameters": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      }
     ]
+  },
+  {
+    "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
+    "name": "neon_buck_ticket_confirmation",
+    "language": {
+      "policy": "deterministic",
+      "code": "id"
     },
-
-  
-    {
-        "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
-        "name": "neon_buck_ticket_confirmation",
-        "language": {
-          "policy": "deterministic",
-          "code": "id"
-        },
-        "components": [
-
-        {
-          "type": "header",
-          "parameters": [
-            {
-              "type": "document",
-              "document": {
-                "link": "https://rumchatwhatsapp.s3-ap-southeast-1.amazonaws.com/uploads/2021/10/21/2e84f3fa-cc3b-424d-a281-0a5b5732f8b8.png"
-              }
-            }
-          ]
-        }
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "document",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "type": "body",
+        "parameters": [
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      }
     ]
+  },
+  {
+    "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
+    "name": "star_lows_ticket_confirmation",
+    "language": {
+      "policy": "deterministic",
+      "code": "id"
     },
-
-    
-    {
-        "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
-        "name": "star_lows_ticket_confirmation",
-        "language": {
-          "policy": "deterministic",
-          "code": "id"
-        },
-        "components": [
-        {
-          "type": "header",
-          "parameters": [
-            {
-              "type": "image",
-              "image": {
-                "link": "https://rumchatwhatsapp.s3-ap-southeast-1.amazonaws.com/uploads/2021/10/21/2e84f3fa-cc3b-424d-a281-0a5b5732f8b8.png"
-              }
-            }
-          ]
-        }
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "image",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "type": "body",
+        "parameters": [
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": ""
+          },
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      }
     ]
+  },
+  {
+    "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
+    "name": "starb_stand_ticket_confirmation",
+    "language": {
+      "policy": "deterministic",
+      "code": "id"
     },
-
-
-    {
-        "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
-        "name": "starb_stand_ticket_confirmation",
-        "language": {
-          "policy": "deterministic",
-          "code": "id"
-        },
-        "components": [
-
-
-        {
-          "type": "header",
-          "parameters": [
-            {
-              "type": "video",
-              "video": {
-                "link": "https://www.youtube.com/embed/0oe7CF-TY_U"
-              }
-            }
-          ]
-        }
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "video",
+            "link": ""
+          }
+        ]
+      },
+      
+      {
+        "type": "body",
+        "parameters": [
+          {
+            "type": "text",
+            "text": "testing"
+          },
+          {
+            "type": "text",
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "footer",
+        "text": "Pesan ini berasal dari bisnis yang tidak terverifikasi."
+      }
     ]
-    },
-
-
-
-    {
-        "namespace": "c928ea93_3b01_4be7_8102_4930471e333b",
-        "name": "starb_news_ticket_confirmation",
-        "language": {
-          "policy": "deterministic",
-          "code": "id"
-        },
-        "components": [
-        {
-          "type": "header",
-          "parameters": [
-            {
-              "type": "text",
-              "text": "Hi test"
-            },
-            {
-              "type": "text",
-              "text": "Hi test"
-            },
-            {
-              "type": "text",
-              "text": "Hi test"
-            },
-            {
-              "type": "text",
-              "text": "Hi test"
-            }
-          ]
-        }
-      ]
-    }
-    
+  }
 ]
