@@ -7,6 +7,7 @@ function Template() {
   const [data, setData] = useState(Data);
   const [selectedTemp, setSelectedTemp] = useState("");
   const [errorMessages, setErrorMessages] = useState({});
+  const [modifiedData, setModifiedData] = useState([]);
 
   const handleSelect = (e) => {
     setSelectedTemp(e.target.value);
@@ -17,6 +18,25 @@ function Template() {
     let newData = [...data];
     newData[outerIndex].components[innerIndex].parameters[mainIndex].text = e.target.value;
     setData(newData);
+
+
+    const modifiedItem = { ...data[outerIndex] };
+    modifiedItem.components = [...modifiedItem.components];
+    modifiedItem.components[innerIndex] = { ...modifiedItem.components[innerIndex] };
+    modifiedItem.components[innerIndex].parameters = [...modifiedItem.components[innerIndex].parameters];
+    modifiedItem.components[innerIndex].parameters[mainIndex] = { ...modifiedItem.components[innerIndex].parameters[mainIndex] };
+    modifiedItem.components[innerIndex].parameters[mainIndex].text = e.target.value;
+    setModifiedData((prevData) => {
+      const existingItemIndex = prevData.findIndex((item) => item.name === modifiedItem.name);
+      if (existingItemIndex !== -1) {
+        prevData[existingItemIndex] = modifiedItem;
+        return [...prevData];
+      } else {
+        return [...prevData, modifiedItem];
+      }
+    });
+
+
   };
 
   const handleFileUpload = (outerIndex, innerIndex, mainIndex, e) => {
@@ -25,6 +45,41 @@ function Template() {
     const url = URL.createObjectURL(file);
     newData[outerIndex].components[innerIndex].parameters[mainIndex].link = url;
     setData(newData);
+
+    const modifiedItem = { ...data[outerIndex] };
+    modifiedItem.components = [...modifiedItem.components];
+    modifiedItem.components[innerIndex] = { ...modifiedItem.components[innerIndex] };
+    modifiedItem.components[innerIndex].parameters = [...modifiedItem.components[innerIndex].parameters];
+    modifiedItem.components[innerIndex].parameters[mainIndex] = { ...modifiedItem.components[innerIndex].parameters[mainIndex] };
+    modifiedItem.components[innerIndex].parameters[mainIndex].link = url;
+    setModifiedData((prevData) => {
+      const existingItemIndex = prevData.findIndex((item) => item.name === modifiedItem.name);
+      if (existingItemIndex !== -1) {
+        prevData[existingItemIndex] = modifiedItem;
+        return [...prevData];
+      } else {
+        return [...prevData, modifiedItem];
+      }
+    });
+  
+
+  };
+
+  const submit = () => {
+   
+    const updatedJSON = JSON.stringify(modifiedData, null, 2);
+    const blob = new Blob([updatedJSON], { type: 'application/json' });
+
+  
+    const url = URL.createObjectURL(blob);
+
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = 'updated_template.json';
+    anchor.click();
+
+ 
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -98,6 +153,8 @@ function Template() {
             </div>
           )) : null
       )}
+
+      <button onClick={submit}>submit</button>
     </div>
   );
 }
