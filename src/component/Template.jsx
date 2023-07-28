@@ -65,18 +65,30 @@ function Template() {
 
   };
 
+  const isDisableSubmit = () => {
+    let subData = [...data];
+    if(selectedTemp) {
+      return (subData.some((item) => item.name == selectedTemp && item.components.some((innerItem) => innerItem.type == "header" ? innerItem.parameters.some((innerData) => innerData.link == "") : innerItem.parameters && innerItem.parameters.some((innerData) => innerData.text == ""))))
+    }
+    else return true
+  }
+
   const submit = () => {
-
-    const updatedJSON = JSON.stringify(modifiedData, null, 2);
-    const blob = new Blob([updatedJSON], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement('a');
-    anchor.href = url;
-    anchor.download = 'updated_template.json';
-    anchor.click();
-
-
-    URL.revokeObjectURL(url);
+    if(isDisableSubmit()) {
+      alert("Plase Fill All the mandatory field")
+    }
+    else {
+      const updatedJSON = JSON.stringify(modifiedData, null, 2);
+      const blob = new Blob([updatedJSON], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = 'updated_template.json';
+      anchor.click();
+  
+  
+      URL.revokeObjectURL(url);
+    }
   };
 
   return (
